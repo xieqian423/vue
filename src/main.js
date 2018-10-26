@@ -3,12 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import 'viewerjs/dist/viewer.css'
-import Viewer from 'v-viewer'
+// import 'viewerjs/dist/viewer.css'
+// import Viewer from 'v-viewer'
 import vuex from 'vuex'
 
 Vue.use(vuex)
-Vue.use(Viewer)
+// Vue.use(Viewer)
 
 Vue.config.productionTip = false
 
@@ -25,5 +25,10 @@ new Vue({
   router,
   store,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  data () {
+    return {
+      Bus: new Vue()
+    }
+  }
 })

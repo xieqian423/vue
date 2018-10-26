@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      *{margin: 0; padding: 0}
+      .box{
+        height: 200px;
+        background: bisque;
+        text-align: center;
+        position: relative;
+        margin-top: 50px;
+      }
+      .footer{
+        height: 30px;
+        background: #ccc;
+      }
+
+      .top{
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+      }
+      .top .flex-top{
+        background: cadetblue;
+      }
+      .top .flex-bottom{
+        background: cornflowerblue;
+        overflow: auto;
+      }
+      .top .flex-bottom .content{
+        height: 200px;
+      }
+    </style>
+</head>
+<body>
+<div class="box">
+  <!--<div class="header">-->
+    <!--<div class="header-detail">HEADER</div>-->
+  <!--</div>-->
+  <!--<div class="main">-->
+    <!--<div class="main-detail">MAIN</div>-->
+  <!--</div>-->
+  <div class="top">
+    <div class="flex-top">HEADER</div>
+    <div class="flex-bottom">
+      <div class="content">
+        MAIN
+      </div>
+      <div>顶部不固定,底部固定,中间占据剩余部分并滚动</div>
+    </div>
+    <div class="footer">FOOTER</div>
+  </div>
+</div>
+</body>
+</html>
