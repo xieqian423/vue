@@ -7,9 +7,11 @@
       </template>
      <button type="button" @click="show">Show</button>
     </div> -->
-    <keep-alive>
+    <!-- <keep-alive>
       <router-view/>
-    </keep-alive>
+    </keep-alive> -->
+          <router-view/>
+
   </div>
 </template>
 

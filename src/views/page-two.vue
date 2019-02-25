@@ -13,7 +13,6 @@ export default {
   name: 'Test',
   data () {
     return {
-     
     }
   },
   components: {

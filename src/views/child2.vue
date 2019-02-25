@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div @click='sendMsg'>
    this is child2
   </div>
 </template>
@@ -10,10 +10,13 @@ export default {
   components: {
   },
   created () {
-    // console.log('ready1')
+    console.log('ready child2')
     this.$root.Bus.$on('eventName', value => {
       alert(value)
     })
+  },
+  mounted () {
+    console.log('mounted child2')
   },
   methods: {
     sendMsg (data) {

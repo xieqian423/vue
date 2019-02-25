@@ -9,3 +9,5 @@ var store = new vuex.Store({
     counter: 0
   }
 })
+
+export default store

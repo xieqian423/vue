@@ -10,12 +10,13 @@ export default {
   components: {
   },
   created () {
-    console.log('ready1')
+    console.log('ready1 child1')
   },
   methods: {
     sendMsg (data) {
-      // this.$emit('showCity', 'beijing')
-      this.$root.Bus.$emit('eventName', 123)
+      this.$emit('showCity', 'beijing')
+      alert(1)
+      // this.$root.Bus.$emit('eventName', 123)
     }
   }
 }
