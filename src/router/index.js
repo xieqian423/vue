@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import HelloWorld from '@/components/HelloWorld'
-import SlotTest from '../components/SlotTest'
-import pageOne from '../views/page-one'
+import Main from '../views/Main'
+import ProductList from '../components/ProductList'
 import pageTwo from '../views/page-two'
 
 Vue.use(Router)
@@ -11,18 +10,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'test',
-      component: pageOne
+      name: 'main',
+      component: Main
     },
     {
-      path: '/two',
-      name: 'pagetwo',
-      component: pageTwo
-    },
-    {
-      path: '/slot/test',
-      name: 'Slot',
-      component: SlotTest
+      path: '/productlist/:type',
+      name: 'ProductList',
+      component: ProductList
     }
   ]
 })

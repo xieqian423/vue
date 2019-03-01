@@ -5,19 +5,21 @@ import App from './App'
 import router from './router'
 // import 'viewerjs/dist/viewer.css'
 // import Viewer from 'v-viewer'
-import vuex from 'vuex'
+// import vuex from 'vuex'
 
-Vue.use(vuex)
+import store from './store/index'
+
+// Vue.use(vuex)
 // Vue.use(Viewer)
 
 Vue.config.productionTip = false
 
-var store = new vuex.Store({
-  state: {
-    show: false,
-    counter: 0
-  }
-})
+// var store = new vuex.Store({
+//   state: {
+//     show: false,
+//     counter: 0
+//   }
+// })
 
 /* eslint-disable no-new */
 new Vue({
