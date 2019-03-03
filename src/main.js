@@ -7,7 +7,7 @@ import router from './router'
 // import Viewer from 'v-viewer'
 // import vuex from 'vuex'
 
-import store from './store/index'
+import store from './store/index.js'
 
 // Vue.use(vuex)
 // Vue.use(Viewer)

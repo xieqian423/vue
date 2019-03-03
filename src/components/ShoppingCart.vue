@@ -1,6 +1,6 @@
 <template>
   <div class="cart">
-    <div class="cart-item" v-for="p in products" :key="p.id">
+    <div class="cart-item" v-for="p in carts" >
       <span>{{p.title}}</span>
       <span>{{p.price}}</span>
       <span @click="onRemove(p)">删除</span>
@@ -15,11 +15,16 @@ export default {
   name: 'Product',
   data () {
     return {
-        products: []
+        // products: []
     }
   },
   created () {
-      this.products = this.$store.state.shopcart
+      // this.products = this.$store.state.shopcart
+  },
+  computed: {
+    carts () {
+       return this.$store.state.cart.items
+    }
   },
   methods: {
     // 调用1
@@ -28,14 +33,14 @@ export default {
     // },
     // 调用2
     ...mapMutations({
-      onRemove: 'removecart'
+      onRemove: 'cart/removecart'
     }),
     // 调用3 : 在组件内调用 this.removecart 方法
     // ...mapMutations([
     //   'removecart'
     // ]),
     onCheckout () {
-      
+
     }
   }
 }

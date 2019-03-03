@@ -21,7 +21,7 @@ export default {
         } else {
           reject('no type products')
         }
-      }, 1000)
+      }, 100)
     })
   },
   buyProducts () {

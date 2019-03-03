@@ -10,24 +10,26 @@
 
 <script>
 import types from '../store/mutation-types'
-import api from '../api/shop.js'
 export default {
   name: 'Product',
   props: [],
   data () {
     return {
         type: this.$route.params.type,
-        products: []
+        // products: this.$store.state.products.items
     }
   },
   created () {
-      api.getProducts(this.type).then(res => {
-          this.products = res
-      })
+    this.$store.dispatch('products/getProducts', {type: this.type})
+  },
+  computed: {
+    products () {
+       return this.$store.state.products.items
+    }
   },
   methods: {
     onBug (p) {
-      this.$store.commit(types.ADD_CART, p)
+      this.$store.dispatch('cart/addcartAsync', p)
       // this.$store.dispatch('addcartAsync', p)
     }
   }
