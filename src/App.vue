@@ -6,6 +6,7 @@
     <div class="product-list">
       <router-view/>
     </div>
+    <!-- <a @click="onDelayload">测试延迟加载</a> -->
     <div class="shopcart">
         <div class="title"> 购物车</div>
         <shopcart></shopcart>
@@ -44,6 +45,9 @@ export default {
     onMenu (id) {
         // this.isShowPop = !this.isShowPop
         location.href = '#/productlist/' + (id+1)
+    },
+    onDelayload () {
+       // location.href = '#/hello'
     }
   },
   components: {
