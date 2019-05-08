@@ -4,7 +4,9 @@
       <a v-for="(m,index) in menulist" @click="onMenu(index)" :key="'menu'+index">{{m.name}}</a>
     </div>
     <div class="product-list">
-      <router-view/>
+      <keep-alive include="main">
+        <router-view/>
+      </keep-alive>
     </div>
     <!-- <a @click="onDelayload">测试延迟加载</a> -->
     <div class="shopcart">

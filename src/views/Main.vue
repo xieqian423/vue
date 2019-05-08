@@ -1,18 +1,15 @@
 <template>
   <div class="main">
-    <!-- <div class="menu-list">
-      <div v-for="m in menulist">{{m.name}}</div>
-    </div>
-    <div class="product-list">
-      <router-view/>
-    </div> -->
     11111
+    <button @click="next">下一页</button>
+    <HelloWorld></HelloWorld>
   </div>
 </template>
 
 <script>
+import HelloWorld from '../components/HelloWorld.vue'
 export default {
-  name: 'App',
+  name: 'main',
   data () {
     return {
       menulist: [
@@ -29,6 +26,9 @@ export default {
     this.bindBeforeunload()
   },
   methods: {
+    next () {
+      location.href = 'https://www.baidu.com/'
+    },
     bindBeforeunload () {
       window.onbeforeunload = function() {
         alert("There are unsaved changes. Leave now?");
@@ -37,6 +37,7 @@ export default {
     }
   },
   components: {
+    HelloWorld
   }
 }
 </script>
