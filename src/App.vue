@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="menu-list">
+    <!-- <div class="menu-list">
       <a v-for="(m,index) in menulist" @click="onMenu(index)" :key="'menu'+index">{{m.name}}</a>
     </div>
     <div class="product-list">
@@ -8,7 +8,6 @@
         <router-view/>
       </keep-alive>
     </div>
-    <!-- <a @click="onDelayload">测试延迟加载</a> -->
     <div class="shopcart">
         <div class="title"> 购物车</div>
         <shopcart></shopcart>
@@ -17,9 +16,9 @@
       <div class="pop" v-if="isShowPop">
           这是一个弹窗
       </div>
-    </transition>
+    </transition> -->
 
-    <!-- <router-view/> -->
+    <router-view/>
   </div>
 </template>
 

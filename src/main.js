@@ -14,6 +14,9 @@ import store from './store/index.js'
 
 Vue.config.productionTip = false
 
+// import anchoredHeading from './common/anchored-heading.vue'
+// Vue.component('anchored-heading', anchoredHeading)
+
 // var store = new vuex.Store({
 //   state: {
 //     show: false,
@@ -23,14 +26,14 @@ Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  store,
-  components: { App },
-  template: '<App/>',
-  data () {
-    return {
-      Bus: new Vue()
+    el: '#app',
+    router,
+    store,
+    components: { App },
+    template: '<App/>',
+    data () {
+        return {
+            Bus: new Vue()
+        }
     }
-  }
 })

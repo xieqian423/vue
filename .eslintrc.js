@@ -23,7 +23,15 @@ module.exports = {
   rules: {
     // allow async-await
     'generator-star-spacing': 'off',
-    // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    // allow debugger during development,
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'indent': 'off',
+    'vue/script-indent': [
+      'error',
+      4,
+      {
+        'baseIndent': 1
+      }
+    ]
   }
 }
