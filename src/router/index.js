@@ -2,7 +2,7 @@ import Vue from 'vue'
 // import Router from 'vue-router'
 import Router from '../plugins/Router.js'
 import Main from '../views/Main'
-import pageone from '../views/page-one'
+// import pageone from '../views/page-one'
 // import ProductList from '../components/ProductList'
 // import hello from '../components/HelloWorld'
 
@@ -27,7 +27,7 @@ export default new Router(Vue, {
     {
       path: '/pageone',
       name: 'pageone',
-      component: pageone
+      component: () => import('../views/page-one')
     }, 
     {
       path: '/test',

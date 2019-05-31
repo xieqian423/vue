@@ -29,6 +29,7 @@
 <script>
 import child from './child'
 import child2 from './child2'
+import anchoredHeading from '../common/anchored-heading.vue' //
 
 import QRcode from 'qrcode'
 
@@ -54,7 +55,7 @@ export default {
     console.log('mounted')
   },
   activated: function () {
-    console.log('activated')
+    // console.log('activated')
   },
   deactivated: function () {
     console.log('deactivated')

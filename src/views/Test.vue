@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import anchoredHeading from '../common/anchored-heading.js' // 测试jsx组件
+import anchoredHeading from '../common/anchored-heading.vue' // 测试jsx组件
 // import A from '../js/getClass.js'
 
 export default {
